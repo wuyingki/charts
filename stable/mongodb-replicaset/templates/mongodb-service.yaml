@@ -17,8 +17,7 @@ metadata:
 {{- end }}
   name: {{ template "mongodb-replicaset.fullname" . }}
 spec:
-  type: ClusterIP
-  clusterIP: None
+  type: LoadBalancer
   ports:
     - name: peer
       port: {{ .Values.port }}
